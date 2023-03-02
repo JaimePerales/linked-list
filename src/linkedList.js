@@ -142,6 +142,24 @@ class LinkedList {
         newNode.nextNode = nodeAtIndex;
     }
 
+    removeAt(index) {
+
+        if (index === 0) { this.head = this.head.nextNode; return }
+
+        // Gets the node pointing to the node at the provided index
+        const nodeBeforeIndex = this.at(index - 1);
+
+        // Gets the node at the index
+        const nodeAtIndex = this.at(index);
+        // If the index is greater than the size of the list, append value
+        if (nodeAtIndex === null) {
+
+            return;
+        }
+
+        nodeBeforeIndex.nextNode = nodeAtIndex.nextNode;
+    }
+
     toString() {
         let node = this.head;
         if (node === null) {

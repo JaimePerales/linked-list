@@ -27,3 +27,19 @@ console.log(list.contains("bingos", list.head));
 console.log(list.find(3, list.head, 0));
 
 console.log(list.toString());
+
+list.removeAt(0);
+
+console.log(`List after removeAt(0): ${list.toString()}`);
+
+list.removeAt(1);
+
+console.log(`List after removeAt(1): ${list.toString()}`);
+
+list.removeAt(5);
+
+console.log(`List after removeAt(5): ${list.toString()}`);
+
+list.removeAt(10);
+
+console.log(`List after removeAt(10): ${list.toString()}`);
